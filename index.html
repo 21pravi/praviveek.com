@@ -57,20 +57,21 @@ header{
   position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);
 }
-.bar{max-width:1180px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.wordmark{font-family:var(--disp);font-size:20px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--navy)}
+.bar{max-width:1180px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.wordmark{font-family:var(--disp);font-size:19px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--navy);white-space:nowrap;flex-shrink:0}
 .wordmark span{color:var(--azure)}
-nav.main{display:flex;align-items:center;gap:34px}
+nav.main{display:flex;align-items:center;gap:20px;flex-wrap:nowrap}
 nav.main a{
-  font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
   text-decoration:none;color:var(--slate);transition:color .2s;position:relative;padding:6px 0;
+  white-space:nowrap;flex-shrink:0;
 }
 nav.main a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--azure);transition:width .25s}
 nav.main a:hover{color:var(--navy)}
 nav.main a:hover::after{width:100%}
 .nav-cta{
-  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
-  background:var(--azure);color:#fff !important;padding:12px 26px;border-radius:4px;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  background:var(--azure);color:#fff !important;padding:12px 18px;border-radius:4px;white-space:nowrap;
   box-shadow:0 4px 14px -4px rgba(2,132,199,.5);transition:background .2s,transform .2s;
 }
 .nav-cta::after{display:none}
@@ -327,6 +328,13 @@ footer{border-top:1px solid var(--hair);padding:30px 32px;text-align:center;font
 }
 
 /* ============ RESPONSIVE ============ */
+@media (max-width:1210px){
+  nav.main{gap:18px}
+  nav.main a{font-size:11px;letter-spacing:.1em}
+  .nav-cta{padding:11px 16px;letter-spacing:.08em}
+  .wordmark{font-size:18px;letter-spacing:.1em}
+  .bar{padding:0 22px;gap:18px}
+}
 @media (max-width:1040px){
   .hero-grid{grid-template-columns:1fr;gap:60px}
   .portrait{max-width:430px}
