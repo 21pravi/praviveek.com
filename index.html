@@ -253,6 +253,33 @@ h2 em{font-style:italic;color:var(--azure-deep)}
 .skill-col li:last-child{border-bottom:none}
 
 /* ============ FREELANCE ============ */
+/* Signal blog band */
+.signal-band{
+  display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;
+  margin:0 0 96px;padding:40px 46px;text-decoration:none;color:inherit;
+  background:var(--panel);border:1px solid var(--hair);border-left:4px solid var(--azure);
+  border-radius:8px;transition:box-shadow .3s,transform .3s,border-left-color .3s;
+}
+.signal-band:hover{box-shadow:0 30px 60px -26px rgba(10,37,64,.28);transform:translateY(-3px);border-left-color:var(--navy)}
+.sb-left{flex:1;min-width:280px}
+.sb-left .caps{display:block;margin-bottom:10px}
+.signal-band h3{font-family:var(--disp);font-weight:400;font-size:34px;line-height:1;letter-spacing:-.01em;margin-bottom:10px}
+.sb-dot{color:var(--azure)}
+.signal-band p{color:var(--slate);font-weight:300;font-size:15.5px;max-width:52ch}
+.sb-right{display:flex;flex-direction:column;align-items:center;gap:14px}
+.sb-right svg{width:150px;height:88px;overflow:visible}
+.sb-ax{stroke:var(--hair);stroke-width:1.5}
+.sb-noise{fill:none;stroke:#C6D6E4;stroke-width:1.5;stroke-linejoin:round}
+.sb-sig{fill:none;stroke:var(--azure);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.sb-dotc{fill:var(--azure)}
+.sb-go{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--azure-deep);white-space:nowrap}
+.signal-band:hover .sb-go{color:var(--navy)}
+@media (max-width:760px){
+  .signal-band{padding:30px 24px;margin-bottom:64px;gap:22px}
+  .signal-band h3{font-size:28px}
+  .sb-right{flex-direction:row;width:100%;justify-content:space-between}
+  .sb-right svg{width:110px;height:64px}
+}
 .free{background:linear-gradient(155deg,var(--navy) 0%,var(--navy-2) 60%,#0E4368 100%);color:#fff;position:relative;overflow:hidden}
 .free::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(79,179,232,.25)}
 .free::before{content:"";position:absolute;right:-80px;top:-80px;width:360px;height:360px;border-radius:50%;border:1px solid rgba(255,255,255,.1)}
@@ -343,6 +370,7 @@ footer{border-top:1px solid var(--hair);padding:30px 32px;text-align:center;font
       <a href="#projects">Projects</a>
       <a href="#skills">Expertise</a>
       <a href="#certs">Certifications</a>
+      <a href="https://praviveek.online" target="_blank" rel="noopener">Signal ↗</a>
       <a href="https://drive.google.com/file/d/141QlyUqdqhtZpLmadMFzeNkRfdZvGbW9/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="#freelance">Let's talk data</a>
@@ -812,6 +840,26 @@ footer{border-top:1px solid var(--hair);padding:30px 32px;text-align:center;font
         </div>
       </section>
     </div>
+  </div>
+
+  <!-- ============ SIGNAL / BLOG ============ -->
+  <div class="wrap">
+    <a class="signal-band rv" href="https://praviveek.online" target="_blank" rel="noopener">
+      <div class="sb-left">
+        <span class="caps">Now writing</span>
+        <h3>Signal<span class="sb-dot">.</span></h3>
+        <p>A weekday AI &amp; tech digest, arXiv paper picks, and my own research notes — filtering the signal out of the noise.</p>
+      </div>
+      <div class="sb-right">
+        <svg viewBox="0 0 120 70" aria-hidden="true">
+          <line class="sb-ax" x1="8" y1="60" x2="112" y2="60"/>
+          <polyline class="sb-noise" points="8,44 20,50 32,36 44,52 56,30 68,46 80,26 92,40 104,20"/>
+          <polyline class="sb-sig" points="8,50 26,46 44,40 62,32 80,25 98,17 112,12"/>
+          <circle class="sb-dotc" cx="112" cy="12" r="3.5"/>
+        </svg>
+        <span class="sb-go">Read it ↗</span>
+      </div>
+    </a>
   </div>
 
   <!-- ============ FREELANCE ============ -->
